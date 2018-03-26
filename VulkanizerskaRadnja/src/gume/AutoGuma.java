@@ -1,7 +1,7 @@
 package gume;
 
 /**
- * 
+ * Klasa predstavlja automobilsku gumu
  * @author Nikola
  * @version 1.0.0
  */
@@ -34,7 +34,7 @@ public class AutoGuma {
 	/**
 	 * Sluzi za unos modela i marke gume
 	 * @param markaModel prihvata informacije o marci i modelu gume
-	 * @throws RuntimeException unet string sa manje od 3 karaktera
+	 * @throws java.lang.RuntimeException unet string sa manje od 3 karaktera
 	 */
 	public void setMarkaModel(String markaModel) {
 		if (markaModel == null || markaModel.length() < 3)
@@ -51,7 +51,7 @@ public class AutoGuma {
 	/**
 	 * Sluzi za unos precnika gume
 	 * @param precnik prihvata informaciju o precniku gume
-	 * @throws RuntimeException ukoliko je precnik van opsega
+	 * @throws java.lang.RuntimeException ukoliko je precnik van opsega
 	 */
 	public void setPrecnik(int precnik) {
 		if (precnik < 13 || precnik > 22)
@@ -68,7 +68,7 @@ public class AutoGuma {
 	/**
 	 * Sluzi za unos sirine gume
 	 * @param sirina prihvata informaciju o sirini gume
-	 * @throws RuntimeException ukoliko je sirina van opsega
+	 * @throws java.lang.RuntimeException ukoliko je sirina van opsega
 	 */
 	public void setSirina(int sirina) {
 		if (sirina < 135 || sirina > 355)
@@ -85,7 +85,7 @@ public class AutoGuma {
 	/**
 	 * Sluzi za unos visine gume
 	 * @param visina prihvata informaciju o visini gume
-	 * @throws RuntimeException ukoliko je visina van opsega
+	 * @throws java.lang.RuntimeException ukoliko je visina van opsega
 	 */
 	public void setVisina(int visina) {
 		if (visina < 25 || visina > 95)
