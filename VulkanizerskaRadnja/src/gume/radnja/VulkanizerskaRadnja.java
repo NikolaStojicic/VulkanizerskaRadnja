@@ -2,6 +2,7 @@ package gume.radnja;
 
 import java.util.LinkedList;
 import gume.AutoGuma;
+
 /**
  * Klasa predstavlja vulkanizersku radnju
  * @author Nikola
@@ -12,11 +13,11 @@ public class VulkanizerskaRadnja {
 	 * Pretsdavlja listu guma
 	 */
 	private LinkedList<AutoGuma> gume = new LinkedList<AutoGuma>();
-	
+
 	/**
 	 * Dodaje novu gumu u listu guma
 	 * @throws java.lang.NullPointerException ukoliko je ulazni parametar null
-	 * @throws  java.lang.RuntimeException ukoliko uneta guma vec postoji u listi
+	 * @throws java.lang.RuntimeException ukoliko uneta guma vec postoji u listi
 	 * @param a predstavlja gumu koja se dodaje
 	 */
 	public void dodajGumu(AutoGuma a) {
@@ -38,7 +39,7 @@ public class VulkanizerskaRadnja {
 			return null;
 		LinkedList<AutoGuma> novaLista = new LinkedList<AutoGuma>();
 		for (int i = 0; i < gume.size(); i++)
-			if (gume.get(i).equals(markaModel))
+			if (gume.get(i).getMarkaModel().equals(markaModel))
 				novaLista.add(gume.get(i));
 		return novaLista;
 	}
