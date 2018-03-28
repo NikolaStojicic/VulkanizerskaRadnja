@@ -1,6 +1,8 @@
-package test;
+package gume.radnja;
 
 import static org.junit.Assert.*;
+
+import java.util.LinkedList;
 
 import org.junit.After;
 import org.junit.Before;
@@ -77,10 +79,17 @@ public class VulkanizerskaRadnjaTest {
 	public void testPronadjiGumuNema() {
 		assertEquals(0, vulkanizerskaRadnja.pronadjiGumu("Michelin").size());
 	}
-
+	
+	// Definitivno nisam siguran da sam bas najbolje razumeo zahtev vezan za ovaj test
 	@Test
 	public void testPronadjiGumuVise() {
-		assertTrue(vulkanizerskaRadnja.pronadjiGumu("Michelin Pilot Super Sport").size() >= 2);
+		//assertTrue(vulkanizerskaRadnja.pronadjiGumu("Michelin Pilot Super Sport").size() >= 2);
+		
+		LinkedList<AutoGuma> listaPronadjenihGuma = vulkanizerskaRadnja.pronadjiGumu("Michelin Pilot Super Sport");
+		for(int i = 0; i < listaPronadjenihGuma.size(); i++) {
+			assertTrue(vulkanizerskaRadnja.pronadjiGumu("Michelin Pilot Super Sport").get(i) instanceof AutoGuma);
+		}
+		assertEquals(2, vulkanizerskaRadnja.pronadjiGumu("Michelin Pilot Super Sport").size());
 	}
 
 }

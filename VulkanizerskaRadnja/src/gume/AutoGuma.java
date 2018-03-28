@@ -51,7 +51,7 @@ public class AutoGuma {
 	/**
 	 * Sluzi za unos precnika gume
 	 * @param precnik prihvata informaciju o precniku gume
-	 * @throws java.lang.RuntimeException ukoliko je precnik van opsega
+	 * @throws java.lang.RuntimeException ukoliko je precnik manji od 13 ili veci od 22
 	 */
 	public void setPrecnik(int precnik) {
 		if (precnik < 13 || precnik > 22)
@@ -68,7 +68,7 @@ public class AutoGuma {
 	/**
 	 * Sluzi za unos sirine gume
 	 * @param sirina prihvata informaciju o sirini gume
-	 * @throws java.lang.RuntimeException ukoliko je sirina van opsega
+	 * @throws java.lang.RuntimeException ukoliko je sirina manja od 135 ili veca od 355
 	 */
 	public void setSirina(int sirina) {
 		if (sirina < 135 || sirina > 355)
@@ -85,7 +85,7 @@ public class AutoGuma {
 	/**
 	 * Sluzi za unos visine gume
 	 * @param visina prihvata informaciju o visini gume
-	 * @throws java.lang.RuntimeException ukoliko je visina van opsega
+	 * @throws java.lang.RuntimeException ukoliko je visina manja od 25 ili veca od 95
 	 */
 	public void setVisina(int visina) {
 		if (visina < 25 || visina > 95)
@@ -105,9 +105,9 @@ public class AutoGuma {
 	}
 
 	/**
-	 * Proverava identicnost dve gume
-	 * @param obj Prihvata informacije o gumi
-	 * @return vraca true ukoliko je rec o istim gumama u suprotnom false
+	 * Proverava identicnost dva objekta klase AutoGuma, odnosno da li su marka i model, precnik, sirina i visina identicni u oba objekta
+	 * @param obj Prihvata informacije o gumi u formi klase Object
+	 * @return true ako je unet objekat identican objektu kojim pozivamo metodu za poredjenje ili false ukoliko nisu identicni ili false ukoliko ulazni objekat nije instanca klase AutoGuma
 	 */
 	@Override
 	public boolean equals(Object obj) {

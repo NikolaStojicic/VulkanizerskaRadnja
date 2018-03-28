@@ -32,7 +32,7 @@ public class VulkanizerskaRadnja {
 	 * Pronalazi gumu u listi guma
 	 * @param markaModel predstavlja informacije o gumi koju trazimo
 	 * @return null ako nije uneta marka i model
-	 * @return {@link LinkedList} novaLista sa elementima {@link AutoGuma} koji imaju istu marku i model
+	 * @return novaLista sa elementima koji imaju istu marku i model 
 	 */
 	public LinkedList<AutoGuma> pronadjiGumu(String markaModel) {
 		if (markaModel == null)
